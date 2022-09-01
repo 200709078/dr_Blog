@@ -1,5 +1,5 @@
 <?php
-
+//2022_08_08_104840_sayfalar.php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;

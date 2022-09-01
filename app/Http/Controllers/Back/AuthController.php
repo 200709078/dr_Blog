@@ -10,13 +10,16 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return view('back.auth.login');
+        if (!Auth::check()) {
+            return view('back.auth.login');
+        }
+        return redirect()->route('admin.dashboard');
     }
 
     public function loginPost(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            toastr()->success('Tekrar hoşgeldiniz ' . Auth::user()->name, 'made by mADEMatik design.');
+            toastr()->success('Tekrar hoşgeldiniz ' . Auth::user()->name, 'made by mADEMatik');
             return redirect()->route('admin.dashboard');
             die();
         }

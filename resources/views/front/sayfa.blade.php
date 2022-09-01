@@ -1,3 +1,4 @@
+{{--sayfa.blade.php--}}
 @extends('front.layouts.master')
 @section('title',$sayfa->baslik)
 @section('subTitle',"Dr. Metehan ÖZDEMİR")
@@ -7,10 +8,3 @@
 {{$sayfa->icerik}}
     </div>
 @endsection
-
-
-
-
-
-
-

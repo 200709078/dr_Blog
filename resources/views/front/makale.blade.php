@@ -11,8 +11,8 @@
         <p class="post-meta text-danger">
             Yazar: <b>{{$makale->yazar}}</b><br>
             Kategori: <b>{{$makale->getKategori->name}}</b><br>
-            Okunma Sayısı: <b>{{$makale->tiklanma}}</b>
-            <span class="float-end">Paylaşım: <b>{{$makale->created_at->diffForHumans()}}</b></span>
+            Okunma Sayısı: <b>{{$makale->tiklanma}}</b><br>
+           Paylaşım: <b>{{$makale->created_at->diffForHumans()}}</b>
         </p>
     </div>
     @include('front.widgets.kategoriListesi');
