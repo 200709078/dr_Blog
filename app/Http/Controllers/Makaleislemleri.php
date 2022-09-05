@@ -10,7 +10,7 @@ class Makaleislemleri extends Controller
 {
     public function makaleekle()
     {
-        if (!Auth::check()) {
+        if (Auth::check()) {
             MakalelerModel::create([
                 "kategori_id" => 1,
                 "baslik" => "Ozon Tedavisi",

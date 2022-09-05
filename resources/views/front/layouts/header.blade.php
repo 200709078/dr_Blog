@@ -20,7 +20,7 @@
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="{{route('homepage')}}">
             <img src="{{ asset('/img/'.$ayarlar->logo)}}" width="50">
-            Dr. Metehan ÖZDEMİR v.1
+            Dr. Metehan ÖZDEMİR
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

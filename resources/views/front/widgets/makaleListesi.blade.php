@@ -1,11 +1,11 @@
 @if(count($makaleler)>0)
     @foreach($makaleler as $icerik)
         <div class="post-preview">
+            <a href="{{route('makale',[$icerik->getKategori->slug,$icerik->slug_baslik])}}">
             <h2 class="post-title">{{$icerik->baslik}}</h2>
             <img src="{{asset('/img/img_makale/'.$icerik->resim)}}" width="600" alt="{{asset($icerik->baslik)}}">
-            <a href="{{route('makale',[$icerik->getKategori->slug,$icerik->slug_baslik])}}">
                 <h3 class="post-subtitle">
-                    {{Illuminate\Support\STR::limit($icerik->makale,strpos($icerik->makale," ",40))}}
+                {{Illuminate\Support\STR::words(strip_tags($icerik->makale),10," ...")}}
                 </h3>
             </a>
             <p class="post-meta text-danger">

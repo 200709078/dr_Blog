@@ -21,7 +21,7 @@ Route::prefix('admin')->name('admin.')->middleware('isLogin')->group(function ()
 });
 
 Route::prefix('admin')->name('admin.')->middleware('isAdmin')->group(function () {
-    Route::get('panel', [Dashboard::class, 'index'])->name('dashboard');
+    Route::get('panel/index', [Dashboard::class, 'index'])->name('dashboard');
     //MAKALE ROUTELER
     Route::get("makaleler", [MakalelerController::class, 'makaleOkuma'])->name('makaleler.index');
     Route::get("makaleler/olustur", [MakalelerController::class, 'makaleOlusturma'])->name('makaleler.olustur');
@@ -52,11 +52,11 @@ Route::prefix('admin')->name('admin.')->middleware('isAdmin')->group(function ()
     Route::get('cikis', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::get("/adminekle", [Adminislemleri::class, 'adminEkle']);
-Route::get("/kategoriekle", [Kategoriislemleri::class, 'kategoriekle']);
-Route::get("/makaleekle", [Makaleislemleri::class, 'makaleekle']);
-Route::get("/sayfaekle", [Sayfaislemleri::class, 'sayfaEkle']);
-Route::get("/ayarekle", [Ayarislemleri::class, 'ayarEkle']);
+//Route::get("/adminekle", [Adminislemleri::class, 'adminEkle']);
+//Route::get("/kategoriekle", [Kategoriislemleri::class, 'kategoriekle']);
+//Route::get("/makaleekle", [Makaleislemleri::class, 'makaleekle']);
+//Route::get("/sayfaekle", [Sayfaislemleri::class, 'sayfaEkle']);
+//Route::get("/ayarekle", [Ayarislemleri::class, 'ayarEkle']);
 
 
 /*FRONT ROUTES*/

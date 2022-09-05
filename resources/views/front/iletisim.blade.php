@@ -27,7 +27,7 @@
                     <label>Email Adres :</label>
                 </div>
                 <div class="form-floating">
-                    <input class="form-control" name="telefon" type="tel" placeholder="Telefon numaranızı giriniz..."/>
+                    <input class="form-control" name="telefon" type="tel" maxlength="10" placeholder="Telefon numaranızı giriniz..."/>
                     <label>Telefon Numarası :</label>
                 </div>
                 <div class="form-floating">
@@ -35,7 +35,7 @@
                     <label>Konu :</label>
                 </div>
                 <div class="form-floating">
-                    <textarea class="form-control" name="mesaj" placeholder="Mesajınızı giriniz..."
+                    <textarea id="summernote" class="form-control" name="mesaj" placeholder="Mesajınızı giriniz..."
                               style="height: 12rem" required></textarea>
                     <label>Mesaj :</label>
                 </div>

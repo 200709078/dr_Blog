@@ -63,11 +63,11 @@ class Homepage extends Controller
         $mesaj->mesaj = $request->mesaj;
         $mesaj->save();
 
-/*        Mail::raw($request->mesaj, function ($message) use ($request) {
+        Mail::raw($request->mesaj, function ($message) use ($request) {
             $message->from($request->email, $request->adsoyad);
-            $message->to('ademvarol0808@hotmail.com', 'Adem VAROL');
-            $message->subject($request->konu);
-        });*/
+            $message->to('ademvarol@madematik.com', 'Adem VAROL');
+            $message->subject($request->konu." - 0".$request->telefon);
+        });
 
         return redirect('iletisim')->with('success', ' Teşekkürler mesajınız bize iletildi...');
     }

@@ -37,7 +37,7 @@
                         <tr>
                             <td><img src="{{asset('img/img_sayfa/'.$veri->resim)}}" width="100"></td>
                             <td>{{$veri->baslik}}</td>
-                            <td>{{$veri->icerik}}</td>
+                            <td>{!! $veri->icerik !!}</td>
                             <td>{{$veri->sira}}</td>
                             <td>{{$veri->created_at->diffForHumans()}}</td>
                             <td>

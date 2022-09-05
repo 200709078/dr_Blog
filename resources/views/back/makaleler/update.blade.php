@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-group">
                     <label>Makale İçeriği</label>
-                    <textarea id="editor" name="icerik" class="form-control" rows="8">{{$makaleler->makale}}</textarea>
+                    <textarea id="summernote" name="icerik" class="form-control" rows="10">{{$makaleler->makale}}</textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Makaleyi Güncelle</button>
