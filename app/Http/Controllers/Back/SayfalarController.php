@@ -38,14 +38,14 @@ class SayfalarController extends Controller
         }
         $sayfa->save();
 
-        toastr()->success('Sayfanız güncellendi.', 'made by mADEMatik design.');
+        toastr()->success('Sayfanız güncellendi.', 'mADEMatik');
         return redirect()->route('admin.sayfalar.index');
     }
 
     public function sayfaSilme($id)
     {
         SayfalarModel::find($id)->delete($id);
-        toastr()->success('Sayfanız geri dönüşüm kutusuna taşındı.', 'made by mADEMatik design.');
+        toastr()->success('Sayfanız geri dönüşüm kutusuna taşındı.', 'mADEMatik');
         return redirect()->route('admin.sayfalar.index');
     }
 
@@ -60,7 +60,7 @@ class SayfalarController extends Controller
         $sayfa = SayfalarModel::onlyTrashed()->find($id);
         $sayfa->deleted_at = null;
         $sayfa->save();
-        toastr()->success('Sayfanız geri dönüşüm kutusundan geri alındı.', 'made by mADEMatik design.');
+        toastr()->success('Sayfanız geri dönüşüm kutusundan geri alındı.', 'mADEMatik');
         return redirect()->route('admin.sgeridonusumoku');
     }
 
@@ -99,7 +99,7 @@ class SayfalarController extends Controller
         }
         $sayfa->save();
 
-        toastr()->success('Sayfanız oluşturuldu.', 'made by mADEMatik design.');
+        toastr()->success('Sayfanız oluşturuldu.', 'mADEMatik');
 
         return redirect()->route('admin.sayfalar.index');
     }

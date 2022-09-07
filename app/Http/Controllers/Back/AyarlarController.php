@@ -36,7 +36,7 @@ class AyarlarController extends Controller
         }
         $ayar->save();
 
-        toastr()->success('Ayarlarınız güncellendi.', 'made by mADEMatik design.');
+        toastr()->success('Ayarlarınız güncellendi.', 'mADEMatik');
         return redirect()->back();
     }
 }

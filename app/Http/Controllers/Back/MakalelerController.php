@@ -41,7 +41,7 @@ class MakalelerController extends Controller
         }
         $makale->save();
 
-        toastr()->success('Makaleniz güncellendi.', 'made by mADEMatik design.');
+        toastr()->success('Makaleniz güncellendi.', 'mADEMatik');
 
         return redirect()->route('admin.makaleler.index');
     }
@@ -49,7 +49,7 @@ class MakalelerController extends Controller
     public function makaleSilme($id)
     {
         MakalelerModel::find($id)->delete($id);
-        toastr()->success('Makaleniz geri dönüşüm kutusuna taşındı.', 'made by mADEMatik design.');
+        toastr()->success('Makaleniz geri dönüşüm kutusuna taşındı.', 'mADEMatik');
         return redirect()->route('admin.makaleler.index');
     }
 
@@ -64,7 +64,7 @@ class MakalelerController extends Controller
         $makale = MakalelerModel::onlyTrashed()->find($id);
         $makale->deleted_at = null;
         $makale->save();
-        toastr()->success('Makaleniz geri dönüşüm kutusundan geri alındı.', 'made by mADEMatik design.');
+        toastr()->success('Makaleniz geri dönüşüm kutusundan geri alındı.', 'mADEMatik');
         return redirect()->route('admin.geridonusumoku');
     }
 
@@ -105,7 +105,7 @@ class MakalelerController extends Controller
         }
         $makale->save();
 
-        toastr()->success('Makaleniz oluşturuldu.', 'made by mADEMatik design.');
+        toastr()->success('Makaleniz oluşturuldu.', 'mADEMatik');
 
         return redirect()->route('admin.makaleler.index');
     }

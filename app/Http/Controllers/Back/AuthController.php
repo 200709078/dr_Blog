@@ -19,7 +19,7 @@ class AuthController extends Controller
     public function loginPost(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            toastr()->success('Tekrar hoşgeldiniz ' . Auth::user()->name, 'made by mADEMatik');
+            toastr()->success('Tekrar hoşgeldiniz ' . Auth::user()->name, 'mADEMatik');
             return redirect()->route('admin.dashboard');
             die();
         }
