@@ -20,7 +20,7 @@
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="{{route('homepage')}}">
             <img src="{{ asset('/img/'.$ayarlar->logo)}}" width="50">
-            Dr. Metehan ÖZDEMİR
+            {{$ayarlar->baslik}}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,8 +38,6 @@
                         <a class="nav-link px-lg-3 py-3 py-lg-4" href="{{route('sayfa',$sayfa->slug_baslik)}}">{{$sayfa->baslik}}</a>
                     </li>
                 @endforeach
-
-
                 <li class="nav-item">
                     <a class="nav-link px-lg-3 py-3 py-lg-4" href="{{route('iletisim')}}">İletişim</a>
                 </li>

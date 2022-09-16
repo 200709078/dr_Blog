@@ -10,5 +10,5 @@ class AyarlarModel extends Model
     use HasFactory;
 
     protected $table = "ayarlar";
-    protected $fillable = ["baslik", "logo", "favicon", "instagram", "youtube", "facebook", "twitter", "created_at", "updated_at"];
+    protected $fillable = ["baslik", "logo", "favicon", "instagram", "youtube", "facebook", "twitter", "whatsapp", "created_at", "updated_at"];
 }

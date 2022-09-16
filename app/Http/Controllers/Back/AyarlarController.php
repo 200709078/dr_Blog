@@ -23,6 +23,7 @@ class AyarlarController extends Controller
         $ayar->youtube = $request->youtube;
         $ayar->facebook = $request->facebook;
         $ayar->twitter = $request->twitter;
+        $ayar->whatsapp = $request->whatsapp;
 
         if ($request->hasFile('logo')) {
             $logo = Str::slug($request->baslik) . "-logo." . $request->logo->getClientOriginalExtension();

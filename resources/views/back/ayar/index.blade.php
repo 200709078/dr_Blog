@@ -62,11 +62,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>WhatsApp Adresi</label>
+                            <input type="text" name="whatsapp" required class="form-control" value="{{$ayarlar->whatsapp}}">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-block btn-success">GÜNCELLE</button>
                 </div>
             </form>
-
         </div>
     </div>
 @endsection

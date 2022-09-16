@@ -17,6 +17,7 @@ class Ayarlar extends Migration
             $table->string('youtube');
             $table->string('facebook');
             $table->string('twitter');
+            $table->string('whatsapp');
             $table->timestamps();
         });
     }

@@ -3,7 +3,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>made by mADEMatik {{date('Y')}} &copy</span>
+            <span>made by mADEMatik 2022<sup><a href="{{route('homepage')}}">&copy</a></sup></span>
         </div>
     </div>
 </footer>
@@ -55,8 +55,6 @@
         })
     });
 </script>--}}
-
-
   <script>
     $(document).ready(function() {
         $('#summernote').summernote();
