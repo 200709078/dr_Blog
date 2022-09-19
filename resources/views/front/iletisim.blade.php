@@ -5,15 +5,9 @@
 @section('content')
 
     <div class="col-md-10 col-lg-8 col-xl-7">
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{session('success')}}
-            </div>
-        @else
-            <div class="alert alert-success">
-                Bizimle iletişime geçin...!
-            </div>
-        @endif
+        <div class="alert alert-success">
+            Bizimle iletişime geçin...!
+        </div>
         <div class="my-5">
             <form method="post" action="{{route('iletisimpost')}}" id="contactForm">
                 @csrf
@@ -23,15 +17,18 @@
                     <label>Ad Soyad :</label>
                 </div>
                 <div class="form-floating">
-                    <input class="form-control" name="email" type="email" placeholder="Email adresinizi giriniz..." required/>
+                    <input class="form-control" name="email" type="email" placeholder="Email adresinizi giriniz..."
+                           required/>
                     <label>Email Adres :</label>
                 </div>
                 <div class="form-floating">
-                    <input class="form-control" name="telefon" type="tel" maxlength="10" placeholder="Telefon numaranızı giriniz..."/>
+                    <input class="form-control" name="telefon" type="tel" maxlength="10"
+                           placeholder="Telefon numaranızı giriniz..."/>
                     <label>Telefon Numarası :</label>
                 </div>
                 <div class="form-floating">
-                    <input class="form-control" name="konu" type="text" placeholder="Mesaj konusunu giriniz..." required/>
+                    <input class="form-control" name="konu" type="text" placeholder="Mesaj konusunu giriniz..."
+                           required/>
                     <label>Konu :</label>
                 </div>
                 <div class="form-floating">

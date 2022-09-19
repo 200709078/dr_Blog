@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace App\Http\Controllers\Front;
 
@@ -69,7 +69,8 @@ class Homepage extends Controller
             $message->subject($request->konu." - 0".$request->telefon);
         });
 
-        return redirect('iletisim')->with('success', ' Teşekkürler mesajınız bize iletildi...');
+        toastr()->success('Teşekkürler. Mesajınız bize iletildi...', 'mADEMatik');
+        return redirect()-> route('homepage');
     }
 
 }
